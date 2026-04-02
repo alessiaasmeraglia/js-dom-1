@@ -1,3 +1,5 @@
+'use strict';
+
 // Seleziono gli elementi del DOM
 const lamp = document.querySelector('.lamp');
 const btn = document.querySelector('#btn');
