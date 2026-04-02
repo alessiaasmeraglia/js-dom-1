@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Impostazioni base della pagina -->
+    <!-- Meta informazioni di base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titolo della pagina -->
     <title>Lampadina intelligente</title>
 
     <!-- Collegamento al file CSS -->
@@ -11,23 +13,31 @@
 </head>
 <body>
 
-    <!-- Contenitore principale -->
+    <!-- Contenitore principale della card -->
     <div class="container">
-        <!-- Titolo -->
+
+        <!-- Titolo dell'app -->
         <h1>Lampadina intelligente</h1>
 
-        <!-- Messaggio di avviso -->
-        <h3 id="warning" class="warning-mex">
+        <!-- Messaggio di avviso mostrato dal JavaScript -->
+        <p id="warning" class="warning-mex">
             Attenzione! Non serve accendere la lampadina, rilevata luce sufficiente.
-        </h3>
+        </p>
 
-        <!-- Contenitore con immagine e bottone -->
+        <!-- Sezione con lampadina, bottone e informazioni -->
         <div class="lamp-box">
+
             <!-- Immagine iniziale della lampadina spenta -->
             <img src="./img/white_lamp.png" alt="Lampadina spenta" class="lamp">
 
-            <!-- Bottone per accendere e spegnere -->
+            <!-- Bottone per accendere e spegnere la lampadina -->
             <button id="btn" class="lamp-btn">Accendi</button>
+
+            <!-- Stato attuale della lampadina -->
+            <p id="status" class="status-text">Stato: OFF</p>
+
+            <!-- Contatore del numero di accensioni -->
+            <p id="counter" class="counter-text">Numero di accensioni: 0</p>
         </div>
     </div>
 

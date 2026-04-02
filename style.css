@@ -16,14 +16,14 @@ body {
     align-items: center;
 }
 
-/* Contenitore centrale */
+/* Contenitore principale */
 .container {
-    background-color: white;
+    width: 340px;
     padding: 30px;
+    text-align: center;
+    background-color: white;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    width: 340px;
 }
 
 /* Titolo principale */
@@ -32,23 +32,23 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* Messaggio di warning inizialmente nascosto */
+/* Messaggio di avviso inizialmente nascosto */
 .warning-mex {
+    margin-bottom: 20px;
     font-size: 14px;
     color: #888;
-    margin-bottom: 20px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-/* Il messaggio appare quando ha la classe active */
+/* Il warning diventa visibile quando ha la classe active */
 .warning-mex.active {
     opacity: 1;
-    color: #d62828;
     font-weight: bold;
+    color: #d62828;
 }
 
-/* Contenitore della lampadina e del bottone */
+/* Contenitore con lampadina, bottone e testi */
 .lamp-box {
     display: flex;
     flex-direction: column;
@@ -59,39 +59,50 @@ h1 {
 /* Immagine della lampadina */
 .lamp {
     width: 120px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Piccolo effetto hover */
+/* Effetto hover sulla lampadina */
 .lamp:hover {
     transform: scale(1.05);
 }
 
+/* Alone luminoso quando la lampadina è accesa */
+.lamp.on {
+    filter: drop-shadow(0 0 20px yellow);
+}
+
 /* Bottone base */
 .lamp-btn {
-    border: 1px solid #ccc;
     padding: 12px 24px;
     font-size: 16px;
+    color: #333;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #e9ecef;
-    color: #333;
     transition: all 0.3s ease;
 }
 
-/* Hover del bottone */
+/* Effetto hover del bottone */
 .lamp-btn:hover {
     background-color: #dfe3e6;
 }
 
-/* Stile del bottone quando la lampadina è accesa */
+/* Bottone quando la lampadina è accesa */
 .lamp-btn.on {
-    background-color: #ff4d4d;
     color: white;
-    
+    background-color: #ff4d4d;
 }
 
 /* Hover del bottone acceso */
 .lamp-btn.on:hover {
     background-color: #e63946;
+}
+
+/* Testo dello stato */
+.status-text,
+.counter-text {
+    font-size: 16px;
+    color: #555;
 }
