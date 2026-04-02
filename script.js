@@ -3,7 +3,7 @@
 // Seleziono gli elementi del DOM
 const lamp = document.querySelector('.lamp');
 const btn = document.querySelector('#btn');
-const warningTitle = document.querySelector('#warning');
+const warningText = document.querySelector('#warning');
 const counterText = document.querySelector('#counter');
 const statusText = document.querySelector('#status');
 
@@ -56,13 +56,13 @@ function showWarnings() {
     const currentHours = currentTime.getHours();
 
     if (count > 2) {
-        warningTitle.innerText = '⚠️ Oggi hai acceso la luce più di 2 volte, cerca di risparmiare energia!';
-        warningTitle.style.color = 'orange';
-        warningTitle.classList.add('active');
+        warningText.innerText = '⚠️ Oggi hai acceso la luce più di 2 volte, cerca di risparmiare energia!';
+        warningText.style.color = 'orange';
+        warningText.classList.add('active');
     } else if (currentHours > 6 && currentHours < 18) {
-        warningTitle.innerText = 'Attenzione! Non serve accendere la lampadina, rilevata luce sufficiente.';
-        warningTitle.style.color = '#d62828';
-        warningTitle.classList.add('active');
+        warningText.innerText = 'Attenzione! Non serve accendere la lampadina, rilevata luce sufficiente.';
+        warningText.style.color = '#d62828';
+        warningText.classList.add('active');
     } else {
         hideWarning();
     }
@@ -70,6 +70,6 @@ function showWarnings() {
 
 // Funzione per nascondere il warning
 function hideWarning() {
-    warningTitle.classList.remove('active');
+    warningText.classList.remove('active');
 }
 
