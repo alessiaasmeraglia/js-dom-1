@@ -1,12 +1,14 @@
+/* Reset base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Stile generale della pagina */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
+    background-color: #f4f6f8;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -14,42 +16,23 @@ body {
     align-items: center;
 }
 
-img {
-    display: block;
-    margin: 0 auto;
-}
-
-.form-check {
-    font-size: 18px;
-}
-
-.form-check-input {
-    cursor: pointer;
-}
-
-.form-check-input:checked {
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.form-check-label {
-    cursor: pointer;
-}
-
+/* Contenitore centrale */
 .container {
-    background: white;
+    background-color: white;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
-    width: 320px;
+    width: 340px;
 }
 
+/* Titolo principale */
 h1 {
     font-size: 28px;
     margin-bottom: 15px;
 }
 
+/* Messaggio di warning inizialmente nascosto */
 .warning-mex {
     font-size: 14px;
     color: #888;
@@ -58,46 +41,57 @@ h1 {
     transition: opacity 0.3s ease;
 }
 
+/* Il messaggio appare quando ha la classe active */
 .warning-mex.active {
     opacity: 1;
     color: #d62828;
     font-weight: bold;
 }
 
+/* Contenitore della lampadina e del bottone */
+.lamp-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Immagine della lampadina */
 .lamp {
     width: 120px;
-    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
+/* Piccolo effetto hover */
 .lamp:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
-.accendi-spegni-btn,
-.on {
+/* Bottone base */
+.lamp-btn {
     border: 1px solid #ccc;
-    padding: 12px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #e9ecef;
+    color: #333;
     transition: all 0.3s ease;
 }
 
-.accendi-spegni-btn {
-    background: #e9ecef;
-    color: #333;
+/* Hover del bottone */
+.lamp-btn:hover {
+    background-color: #dfe3e6;
 }
 
-.accendi-spegni-btn:hover {
-    background: #dfe3e6;
-}
-
-.on {
-    background: #ff4d4d;
+/* Stile del bottone quando la lampadina è accesa */
+.lamp-btn.on {
+    background-color: #ff4d4d;
     color: white;
+    
 }
 
-.on:hover {
-    background: #e63946;
+/* Hover del bottone acceso */
+.lamp-btn.on:hover {
+    background-color: #e63946;
 }
