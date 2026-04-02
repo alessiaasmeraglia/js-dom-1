@@ -14,6 +14,18 @@ body {
     align-items: center;
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+#btn {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+}
+
 .container {
     background: white;
     padding: 30px;
@@ -49,7 +61,7 @@ h1 {
 }
 
 .lamp:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .accendi-spegni-btn,
