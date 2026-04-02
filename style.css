@@ -19,11 +19,21 @@ img {
     margin: 0 auto;
 }
 
-#btn {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    gap: 20px;
+.form-check {
+    font-size: 18px;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.form-check-label {
+    cursor: pointer;
 }
 
 .container {
