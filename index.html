@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primi passi col DOM</title>
+    <title>Lampadina intelligente</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Lampadina</h1>
-    <p>Clicca il bottone per accendere o spegnere la lampadina.</p>
-    
-    <div id="lampadina"></div>
-    
-    <button class="accendi-spegni-interruttore">Accendi/Spegni</button>
+    <div class="container">
+        <h1>Lampadina intelligente</h1>
+        <h3 id="warning" class="warning-mex">Spegni la lampadina che consuma corrente</h3>
 
+        <div>
+            <img src="./img/white_lamp.png" alt="Lampadina spenta" class="lamp">
+            <button id="btn" class="accendi-spegni-btn">Accendi</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
